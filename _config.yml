@@ -3,7 +3,7 @@
 #port: 1001
 title: Awesome Site
 description: Jekyll x Bootstrap@5.2 Boilerplate.
-baseurl: "" 
+baseurl: "/jekyll-boilerplate" 
 localurl: "<%= ENV['LOCAL_URL'] %>"
 url: "http://localhost:1001" 
 
