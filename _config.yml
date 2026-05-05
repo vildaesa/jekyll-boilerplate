@@ -48,3 +48,9 @@ storage_bucket: "<%= ENV['storage_bucket'] %>"
 sender_id: "<%= ENV['sender_id'] %>"
 app_id: "<%= ENV['app_id'] %>"
 measure_id: "<%= ENV['measure_id'] %>"
+
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
