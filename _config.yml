@@ -28,6 +28,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - dotenv
+  - jekyll-minify-html
 
 plugins_dir: _plugins
 
