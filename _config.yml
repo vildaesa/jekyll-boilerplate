@@ -31,6 +31,14 @@ plugins:
 
 plugins_dir: _plugins
 
+collections:
+  blog:
+    output: true
+  admin:
+    output: true
+  product:
+    output: true
+
 # Firebase
 api_key: "<%= ENV['api_key'] %>"
 auth_domain: "<%= ENV['auth_domain'] %>"
