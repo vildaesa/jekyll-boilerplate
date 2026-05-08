@@ -4,6 +4,21 @@
 @use 'reset/media';
 @use 'reset/elements';
 
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 
 .custom-nav .nav-link {
   color: #333;
