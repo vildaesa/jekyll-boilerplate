@@ -6,25 +6,39 @@
 <div class="offcanvas-body">
   <ul class="nav flex-column custom-nav">
     <li class="nav-item">
-      <a class="nav-link py-3" href="{{ site.baseurl }}/admin" data-bs-dismiss="offcanvas">
+      <a class="nav-link py-3" href="{{ site.baseurl }}/admin">
         <i class="bi bi-speedometer2 me-2"></i> Admin Panel
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link py-3" href="{{ site.baseurl }}/product" data-bs-dismiss="offcanvas">
+      <a class="nav-link py-3" href="{{ site.baseurl }}/product">
         <i class="bi bi-box-seam me-2"></i> Products
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link py-3" href="{{ site.baseurl }}/blog" data-bs-dismiss="offcanvas">
+      <a class="nav-link py-3" href="{{ site.baseurl }}/blog">
         <i class="bi bi-journal-text me-2"></i> Our Blog
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link py-3" href="{{ site.baseurl }}/chat-ai" data-bs-dismiss="offcanvas">
+      <a class="nav-link py-3" href="{{ site.baseurl }}/chat-ai">
         <i class="bi bi-robot me-2"></i> Chat AI
       </a>
     </li>
   </ul>
 </div>
 </div>
+
+<script>
+document.querySelectorAll('.custom-nav .nav-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const offcanvasElement = document.getElementById('staticBackdrop');
+    const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+    
+    if (bsOffcanvas) {
+      bsOffcanvas.hide();
+    }
+    
+  });
+});
+</script>
