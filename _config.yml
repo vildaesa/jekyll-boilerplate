@@ -39,6 +39,8 @@ collections:
     output: true
   product:
     output: true
+chat-ai:
+    output: true
 
 # Firebase
 api_key: "<%= ENV['api_key'] %>"
