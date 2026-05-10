@@ -5,7 +5,8 @@ title: Awesome Site
 description: Jekyll x Bootstrap@5.2 Boilerplate.
 baseurl: "/jekyll-boilerplate" 
 localurl: "<%= ENV['LOCAL_URL'] %>"
-url: "" 
+url: ""
+lang: en
 
 # Markdown settings
 markdown: kramdown
