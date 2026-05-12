@@ -6,7 +6,7 @@ description: Jekyll x Bootstrap@5.2 Boilerplate.
 baseurl: "/jekyll-boilerplate" 
 localurl: "<%= ENV['LOCAL_URL'] %>"
 url: ""
-lang: "en"
+lang:
 
 # Markdown settings
 markdown: kramdown
