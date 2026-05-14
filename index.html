@@ -1,18 +1,259 @@
 ---
 layout: default
 ---
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-    .full-height {
-      height: 100vh;
-    }
-  </style>
-  <div class="d-flex justify-content-center align-items-center full-height">
-    <div class="p-5 bg-secondary text-white text-center rounded shadow-lg">
-        <h1>Hello world!</h1>
-        <p>{{site.description}}</p>
+<style>
+  .product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    height: 100%;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-image {
+    height: 250px;
+    object-fit: cover;
+    background-color: #f8f9fa;
+  }
+  
+  .product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #dc3545;
+  }
+  
+  .product-rating {
+    color: #ffc107;
+    font-size: 0.9rem;
+  }
+  
+  .products-section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 20px;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #dc3545;
+    border-radius: 2px;
+  }
+</style>
+
+<!-- Hero Section -->
+<div class="bg-light py-5">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <h1 class="display-4 fw-bold mb-4">Selamat Datang di Toko Online Kami</h1>
+        <p class="lead mb-4">Temukan produk berkualitas terbaik dengan harga terjangkau</p>
+        <a href="#products" class="btn btn-danger btn-lg">Belanja Sekarang</a>
+      </div>
+      <div class="col-lg-6">
+        <img src="https://via.placeholder.com/500x400?text=Hero+Image" alt="Hero" class="img-fluid rounded">
+      </div>
     </div>
   </div>
+</div>
+
+<!-- Products Section -->
+<section class="products-section" id="products">
+  <div class="container">
+    <h2 class="section-title">Produk Terbaru</h2>
+    
+    <!-- Filter Options (Optional) -->
+    <div class="row mb-4">
+      <div class="col-12">
+        <div class="btn-group" role="group">
+          <input type="radio" class="btn-check" name="filter" id="filter-all" checked>
+          <label class="btn btn-outline-danger" for="filter-all">Semua</label>
+          
+          <input type="radio" class="btn-check" name="filter" id="filter-electronics">
+          <label class="btn btn-outline-danger" for="filter-electronics">Elektronik</label>
+          
+          <input type="radio" class="btn-check" name="filter" id="filter-fashion">
+          <label class="btn btn-outline-danger" for="filter-fashion">Fashion</label>
+          
+          <input type="radio" class="btn-check" name="filter" id="filter-home">
+          <label class="btn btn-outline-danger" for="filter-home">Rumah Tangga</label>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Product Grid -->
+    <div class="row g-4">
+      <!-- Product Card 1 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card shadow-sm">
+          <img src="https://via.placeholder.com/300x250?text=Produk+1" alt="Produk 1" class="card-img-top product-image">
+          <div class="card-body">
+            <h5 class="card-title">Wireless Headphones</h5>
+            <p class="card-text text-muted small">Kualitas audio terbaik dengan baterai tahan lama</p>
+            <div class="product-rating mb-2">
+              ★★★★★ (128)
+            </div>
+            <p class="product-price mb-3">Rp 599.000</p>
+            <button class="btn btn-danger w-100 btn-sm">
+              <i class="bi bi-cart"></i> Tambah ke Keranjang
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product Card 2 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card shadow-sm">
+          <img src="https://via.placeholder.com/300x250?text=Produk+2" alt="Produk 2" class="card-img-top product-image">
+          <div class="card-body">
+            <h5 class="card-title">Smart Watch</h5>
+            <p class="card-text text-muted small">Jam tangan pintar dengan fitur lengkap</p>
+            <div class="product-rating mb-2">
+              ★★★★☆ (95)
+            </div>
+            <p class="product-price mb-3">Rp 899.000</p>
+            <button class="btn btn-danger w-100 btn-sm">
+              <i class="bi bi-cart"></i> Tambah ke Keranjang
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product Card 3 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card shadow-sm">
+          <img src="https://via.placeholder.com/300x250?text=Produk+3" alt="Produk 3" class="card-img-top product-image">
+          <div class="card-body">
+            <h5 class="card-title">Smartphone Case</h5>
+            <p class="card-text text-muted small">Casing premium dengan proteksi maksimal</p>
+            <div class="product-rating mb-2">
+              ★★★★★ (256)
+            </div>
+            <p class="product-price mb-3">Rp 149.000</p>
+            <button class="btn btn-danger w-100 btn-sm">
+              <i class="bi bi-cart"></i> Tambah ke Keranjang
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product Card 4 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card shadow-sm">
+          <img src="https://via.placeholder.com/300x250?text=Produk+4" alt="Produk 4" class="card-img-top product-image">
+          <div class="card-body">
+            <h5 class="card-title">Bluetooth Speaker</h5>
+            <p class="card-text text-muted small">Speaker portabel dengan bass yang dalam</p>
+            <div class="product-rating mb-2">
+              ★★★★★ (189)
+            </div>
+            <p class="product-price mb-3">Rp 399.000</p>
+            <button class="btn btn-danger w-100 btn-sm">
+              <i class="bi bi-cart"></i> Tambah ke Keranjang
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product Card 5 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card shadow-sm">
+          <img src="https://via.placeholder.com/300x250?text=Produk+5" alt="Produk 5" class="card-img-top product-image">
+          <div class="card-body">
+            <h5 class="card-title">USB-C Cable</h5>
+            <p class="card-text text-muted small">Kabel charging cepat dan tahan lama</p>
+            <div class="product-rating mb-2">
+              ★★★★☆ (73)
+            </div>
+            <p class="product-price mb-3">Rp 79.000</p>
+            <button class="btn btn-danger w-100 btn-sm">
+              <i class="bi bi-cart"></i> Tambah ke Keranjang
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product Card 6 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card shadow-sm">
+          <img src="https://via.placeholder.com/300x250?text=Produk+6" alt="Produk 6" class="card-img-top product-image">
+          <div class="card-body">
+            <h5 class="card-title">Screen Protector</h5>
+            <p class="card-text text-muted small">Pelindung layar tempered glass berkualitas</p>
+            <div class="product-rating mb-2">
+              ★★★★★ (412)
+            </div>
+            <p class="product-price mb-3">Rp 99.000</p>
+            <button class="btn btn-danger w-100 btn-sm">
+              <i class="bi bi-cart"></i> Tambah ke Keranjang
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product Card 7 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card shadow-sm">
+          <img src="https://via.placeholder.com/300x250?text=Produk+7" alt="Produk 7" class="card-img-top product-image">
+          <div class="card-body">
+            <h5 class="card-title">Phone Stand</h5>
+            <p class="card-text text-muted small">Dudukan HP yang stabil dan dapat disesuaikan</p>
+            <div class="product-rating mb-2">
+              ★★★★★ (154)
+            </div>
+            <p class="product-price mb-3">Rp 199.000</p>
+            <button class="btn btn-danger w-100 btn-sm">
+              <i class="bi bi-cart"></i> Tambah ke Keranjang
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product Card 8 -->
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="card product-card shadow-sm">
+          <img src="https://via.placeholder.com/300x250?text=Produk+8" alt="Produk 8" class="card-img-top product-image">
+          <div class="card-body">
+            <h5 class="card-title">Power Bank</h5>
+            <p class="card-text text-muted small">Powerbank kapasitas 20000mAh dengan fast charging</p>
+            <div class="product-rating mb-2">
+              ★★★★★ (267)
+            </div>
+            <p class="product-price mb-3">Rp 299.000</p>
+            <button class="btn btn-danger w-100 btn-sm">
+              <i class="bi bi-cart"></i> Tambah ke Keranjang
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Load More Button -->
+    <div class="text-center mt-5">
+      <button class="btn btn-outline-danger btn-lg">Lihat Produk Lainnya</button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer CTA -->
+<section class="bg-danger text-white py-5">
+  <div class="container text-center">
+    <h3 class="mb-3">Dapatkan Penawaran Terbaik</h3>
+    <p class="mb-4">Berlangganan newsletter kami untuk diskon eksklusif dan produk terbaru</p>
+    <div class="input-group mb-3" style="max-width: 500px; margin: 0 auto;">
+      <input type="email" class="form-control" placeholder="Masukkan email Anda" aria-label="Email">
+      <button class="btn btn-light" type="button">Berlangganan</button>
+    </div>
+  </div>
+</section>
